@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;700&display=swap');
+
+
+:root {
+    --primary-color: #6366F1;
+    --accent-color: #3f83f8;
+    --text-color: #333333;
+    --link-color: #2563eb;
+    --background-color: #ffffff;
+    --light-gray: #f0f0f0;
+    --gray: #808080;
+    --dark-gray: #555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+
+
+body{
+    height: 100vh;
+    text-align: center;
+    background-color: var(--background-color);
+    padding: 2rem;
+}
+
+.navlinks{
+    gap: 30px;
+}
+
+
+.flex{
+    display: flex;
+}
+
+.header-content{
+    
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo{
+    gap: 8px;
+    align-items: center;
+    
+}
+
+.logo img{
+    height: 1.5em;
+}
+
+.logotext{
+    font-weight: 800;
+    font-size: 1.7em;
+    cursor: pointer;
+}
+
+.navlinks a{
+    color: #52565c;
+}
+
+.primarybutton{
+
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    transition: 0.3s ease-in-out;
+}
+
+.primarybutton:hover{
+    background-color: #5254f8;
+    transform: scale(1.2);
+}
+
+.box1{
+    flex-direction: column;
+    gap: 40px;
+    
+    max-width: 39rem;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+
+}
+
+.secondarybutton{
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    transition: 0.3s ease-in-out;
+}
+
+.secondarybutton:hover{
+    background-color: #000000;
+    transform: scale(1.2);
+}
+
+.mainimg{
+    height: 25rem;
+    border-radius: 20px;
+    transition: 1s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    cursor: pointer;
+}
+
+.mainimg:hover{
+    transform: scale(1.2);
+
+}
+
+.main-content{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+
+}
+
+
+.mainheadingh1{
+    font-size: 4rem;
+}
+
+.mainbuttons{
+    gap: 1.4rem;
+}
+
+.mainpara1{
+    color: var(--primary-color);
+    
+}
+
+.mainpara2{
+    max-width: 35rem;
+}
+
+.companygrid{
+    display: grid;
+    background-color:var(--light-gray);
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+span{
+    color: var(--gray);
+}
+.imgsvg{
+    height: 40px;
+}
+.companysection{
+    justify-content: center;
+
+}
+
+.trusted{
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+
+}
+.companylogo{
+    gap: 0.5px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.cardgrid{
+    display: grid   ;
+    /* grid-template-columns: repeat(2,1fr); */
+    grid-template-columns: repeat(2, minmax(200px, 1fr)); /* Adjust column width as needed */
+
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    
+
+}
+
+.card:nth-child(1){
+    background-color: #4a90e2;
+}
+
+.card:nth-child(2){
+    background-color: #FF6289;
+}
+
+.card:nth-child(3){
+    background-color: #fcbf58;
+}
+
+.card:nth-child(4){
+    background-color: #44bfc3;
+}
+
+.card:nth-child(5){
+    background-color: #77b05d;
+}
+
+.card:nth-child(6){
+    background-color: #7d78b1;
+}
+
+.logotext{
+    color: #000000;
+}
+
+.cardicon img{
+    height: 20px;
+    background-color: var(--background-color);
+    padding: 5px;
+    border-radius: 50%;
+    gap: 10px;
+}
+
+.card{
+    height: 200px;
+    width: 200px;   
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    gap: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+
+.cards{
+    margin: 50px;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--light-gray);
+    
+}
+
+
+
+.cardssectionpara{
+    max-width: 50rem;
+    text-align: center;
+}
+
+.cards-section{
+    flex-direction: column;
+    gap: 30px;
+    margin: 20px;
+}
+
+.card:hover {
+    background-color: #5254f8; /* Change background color on hover */
+    transform: scale(1.05); /* Add a subtle scale effect on hover */
+}
+
+
+
+.testicardimg img{
+    height: 100px;
+}
+
+
+.tcard{
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    border: solid 1px black;
+    padding: 20px;
+    border-radius: 20px;
+    transition: 0.4s ease-in-out  ;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+
+.tcard:hover{
+    transform: scale(1.05);
+    background-color: #B4D4FF;
+    color: black;
+    
+
+}
+
+.tcardname{
+    color: var(--link-color);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.testimonial-section{
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.testimonialcards{
+    justify-content: space-evenly;
+    gap: 30px;
+    
+}
+
+.testimonialh3{
+    font-size: 30px;
+}
+
+.leftimage img{
+    height: 20rem;
+    border-radius: 20px;
+    transition: 1s ease-in-out;
+}
+
+.leftimage img:hover{
+    transform: scale(1.05);
+}
+
+.newsletter{
+    
+    align-items: center; 
+    
+
+    margin: 6rem;
+    justify-content: center;
+
+    
+    
+}
+
+.newsletter-section{
+    align-items: center;
+    background-color: var(--light-gray);
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.rightcontent{
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+    text-align: left;
+    padding: 20px;
+}
+
+.nlform{
+
+    gap: 20px;
+}
+
+.nlform input{
+    border-radius: 2px;
+    border: solid 1px black;
+}
+
+.nlh1{
+    font-size: 3rem;
+    color: var(--primary-color);
+
+}
+
+
+@media only screen and (max-width: 780px) {
+
+    .cardgrid{
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+    }
+
+    .navlinks{
+        display: none;
+    }
+
+    .logotext{
+        font-size: 2rem;
+    }
+    
+    .main-content{
+        flex-wrap: wrap;
+    }
+
+    .mainheadingh1{
+        font-size: 3rem;
+        
+    }
+
+    .box1{
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .mainbuttons{
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .mainimg{
+        display: none;
+    }
+
+    .companygrid{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .newsletter-section{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rightcontent{
+        text-align: center;
+
+    }
+
+    .nlpara1{
+        text-align: center;
+    }
+
+    .testimonialcards{
+        flex-wrap: wrap;
+    }
+
+}

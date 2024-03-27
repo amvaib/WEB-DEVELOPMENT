@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Poppins&family=Roboto&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: grey;
+}
+
+
+.flex{
+    display: flex;
+}
+
+.container{
+    height: 100vh;
+    flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+.clock{
+    background-color: orange;
+    padding: 10px 60px;
+    font-size: 40px;
+    border-radius: 10px;
+    font-family: poppins;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWOHTML</title>
+</head>
+<body>
+
+    <h1>VAIBHAV</h1>
+    <button id="change">CHANGE</button>
+
+
+    
+</body>
+<script>
+    const button = document.querySelector('#change');
+    const heading = document.querySelector('h1');
+    
+    let changeHead;
+
+    function changeText(name){
+        changeHead = heading.innerHTML = `${name}`;
+        
+    }
+
+    button.addEventListener('click',(e)=>{
+        if(heading.innerHTML === "VAIBHAV"){
+            changeText("GAUTAM");
+        }
+        else if(heading.innerHTML === "GAUTAM"){
+            changeText("VAIBHAV");
+        }
+
+    },false);
+
+    
+
+    
+
+    
+</script>
+</html>

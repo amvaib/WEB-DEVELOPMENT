@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THREE</title>
+</head>
+<body>
+    <h1>00:00:00</h1>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+
+
+    
+</body>
+<script>
+    const heading = document.querySelector('h1');
+    const start = document.querySelector('#start');
+    const stop = document.querySelector('#stop');
+
+    let intervalId;
+    
+    start.addEventListener('click',()=>{
+        intervalId = setInterval(()=>{
+        let date = new Date();
+        heading.innerHTML= date.toLocaleTimeString();
+        },1000)
+    },false)
+
+    stop.addEventListener('click',()=>{
+        clearInterval(intervalId)
+        heading.innerHTML = `00:00:00`
+    })
+    
+
+
+
+
+</script>
+</html>

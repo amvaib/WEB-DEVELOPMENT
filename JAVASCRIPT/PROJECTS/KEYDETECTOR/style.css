@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Poppins&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: roboto;
+    color: white;
+    background-color: grey;
+}
+
+.flex{
+    display: flex;
+}
+
+.container{
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}

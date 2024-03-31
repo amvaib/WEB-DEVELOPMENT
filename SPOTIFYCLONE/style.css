@@ -14,26 +14,37 @@ body{
     height: 100vh;
 }
 .right{
-    border:solid red;
+    
     width: 75vw;
+    background-color: #292828;
 }
 
 .left{
-    border: red;
+    
     width: 25vw;
 }
 
 .headicons svg{
     border-radius: 50%;
+    
     background-color: black;
+    transition: all ease-in-out 0.4s;
+    cursor: pointer;
+}
+.headicons svg:hover{
+    border: solid white 1px;
+    transform: scale(1.5);
+    
+
 }
 .head{
-    background-color: grey;
+    background-color: #121212;
 
 }
 .nav{
     justify-content: space-between;
-    padding: 30px;
+    padding: 20px;
+    align-items: center;
     
 
 
@@ -44,7 +55,8 @@ body{
     background-color: #121212;
     color: #656565;
     padding: 10px;
-    border: solid 1px black;
+    border: none;
+    /* border: solid 1px black; */
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
@@ -79,4 +91,103 @@ body{
     color: white;
     border: solid 1px black;
 
+}
+
+.section1{
+    flex-direction: column;
+    gap:30px;
+    padding: 20px;
+}
+
+.leftup li{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    width: 22px;
+    font-size: 18px;
+    font-family: roboto;
+    align-items: center;
+    cursor: pointer;
+    color: #b8b7b7;
+    transition: all ease-in-out 0.4s;
+
+}
+
+.leftup li img{
+    color: #656565;
+}
+
+.leftup li:hover{
+    transform: scale(1.2);
+    color: white;
+
+}
+
+.logoarea img{
+    height: 30px;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.logoarea img:hover{
+    transform: scale(1.2);
+    /* transform: translateX(50%); */
+}
+
+
+.leftup{
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.section1{
+    background-color: #121212;
+    padding: 20px;
+}
+
+.librarysection{
+    background-color: #121212;
+    padding: 25px;
+    
+
+    min-height: 70vh;
+    position: relative;
+}
+
+.liblogo img{
+    width: 30px;
+    color: #656565;
+    
+}
+
+.liblogo{
+    align-items: center;
+    gap: 20px;
+    font-family: roboto;
+
+}
+
+.libtext{
+    color: #b8b7b7;
+    
+}
+
+.upperlib span{
+    cursor: pointer;
+    transition: ease-in-out 0.4s;
+
+}
+
+.upperlib span:hover{
+    transform: scale(1.2);
+    color: white;
+}
+
+.upperlib{
+    padding: 8px;
+    
+    
+    
+    
 }

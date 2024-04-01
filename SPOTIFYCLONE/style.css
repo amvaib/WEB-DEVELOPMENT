@@ -5,6 +5,7 @@
 body{
     background-color: black;
     color: white;
+    font-family: roboto;
 }
 
 
@@ -16,12 +17,16 @@ body{
 .right{
     
     width: 75vw;
-    background-color: #292828;
+    background-color: #121212;
+    /* overflow: auto; */
+    
+    
 }
 
 .left{
     
     width: 25vw;
+    
 }
 
 .headicons svg{
@@ -38,7 +43,7 @@ body{
 
 }
 .head{
-    background-color: #121212;
+    background-color: #0c0b0b;
 
 }
 .nav{
@@ -51,9 +56,13 @@ body{
 }
 
 .sgn-btn{
-    font-family: roboto;
-    background-color: #121212;
-    color: #656565;
+    
+    /* background-color: #121212; */
+    background-color: #0c0b0b;
+
+    /* color: #656565; */
+    color: #b1aeae;
+
     padding: 10px;
     border: none;
     /* border: solid 1px black; */
@@ -70,7 +79,7 @@ body{
     padding: 10px;
     border: solid 1px white;
     border-radius: 8px;
-    font-family: roboto;
+    
     font-weight: bold;
     cursor: pointer;
     transition: ease-in-out 0.3s;
@@ -105,7 +114,7 @@ body{
     gap: 15px;
     width: 22px;
     font-size: 18px;
-    font-family: roboto;
+    
     align-items: center;
     cursor: pointer;
     color: #b8b7b7;
@@ -149,9 +158,11 @@ body{
 .librarysection{
     background-color: #121212;
     padding: 25px;
+    min-height: 80vh;
+
     
 
-    min-height: 70vh;
+    
     position: relative;
 }
 
@@ -164,7 +175,7 @@ body{
 .liblogo{
     align-items: center;
     gap: 20px;
-    font-family: roboto;
+    
 
 }
 
@@ -189,5 +200,95 @@ body{
     
     
     
+    
+}
+
+.spotifyplaylist{
+
+    /* height: 100vh; */
+    background-color: #121212;
+    height: 95vh;
+
+
+    padding: 24px;
+
+}
+
+.spotifyplaylist h1{
+    margin-bottom: 20px;
+    cursor: pointer;
+    /* transition: all 0.4s ease-in-out; */
+    
+    
+
+}
+
+.spotifyplaylist h1:hover{
+    /* transform: scale(1.1); */
+    text-decoration: underline;
+}
+
+.cardcontainer{
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card{
+    width: 200px;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    position: relative;
+
+
+}
+
+
+
+.card h2{
+    font-size: 20px;
+    font-weight:400;
+}
+
+.card p{
+    font-weight: 400;
+    color: #b1aeae;
+    font-size: 13px;
+
+}
+
+.card img{
+    width: 100%;
+    object-fit: contain;
+    transition: all 0.4s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+
+    
+}
+
+
+
+.card:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #1f1e1e;
+    transform: scale(1.1);
+    
+}
+
+.playbar{
+    position: fixed;
+    width: 90%;
+    background-color: black;
+    margin-right: 20px;
+    bottom: 0;
+
+}
+
+.card svg{
+    position:absolute;
+    top: px;
+
     
 }

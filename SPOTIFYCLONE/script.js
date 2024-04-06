@@ -31,22 +31,18 @@ async function getSongs(){
 }
 
 
+const playMusic = (track)=>{
+    let audio = new Audio("/SPOTIFYCLONE/songs/"+track)
+    audio.play();
+}
+
 
 
 async function main(){
-
+    let currentSong;
     let songs = await getSongs();
-    console.log(songs);
-
-    //Play the first song
-    var audio = new Audio(songs[0]);
-    // audio.play();
-
-    audio.addEventListener("loadeddata",()=>{
-        console.log(audio.duration, audio.currentSrc, audio.currentTime);
-    })
-
-    let songUL = document.querySelector(".songList").getElementsByTagName('li')[0];
+    
+    let songUL = document.querySelector(".songList ul")
 
     for (const song of songs) {
         // Create li element
@@ -69,15 +65,12 @@ async function main(){
 
         // Append li to ul
         songUL.appendChild(li);
+
+        li.addEventListener("click", () => {
+            playMusic(song);
+        });
+
     }
-
-
-
-
-
-
-
-
 }
 
 main();

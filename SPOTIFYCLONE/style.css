@@ -234,6 +234,7 @@ body{
 .cardcontainer{
     flex-wrap: wrap;
     gap: 20px;
+    width: 100%;
 }
 
 .card{
@@ -287,15 +288,19 @@ body{
     background-color: white;
     border-radius: 20px;
 
+    
+
     margin-right: 20px;
     height: 65px;
     bottom: 0;
     display: flex;
+    
     /* flex-direction: column;
     gap: 1px; */
     align-items: center;
     justify-content: center;
-
+    
+    
 }
 
 .card svg {
@@ -324,7 +329,11 @@ body{
     justify-content: center;
     gap: 10px;
     align-items: center;
+    width: 120px;
+    
     margin-top: -20px;
+    justify-self: center;
+    margin-left: 20px;
 }
 
 
@@ -349,7 +358,7 @@ body{
 overflow-x: scroll;
 }
 
-.songcard{
+ .songcard{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -359,9 +368,11 @@ overflow-x: scroll;
     border: #b1aeae solid 2px;
     padding: 5px;
     /* width: 10px; */
+    margin-bottom: 20px;
 
 
-}
+} 
+
 
 .songdetails{
     flex-direction: column;
@@ -389,6 +400,7 @@ overflow-x: scroll;
     position: absolute;
     bottom: 0px;
     margin-bottom:17px ;
+    cursor: pointer;
 
 }
 
@@ -403,3 +415,133 @@ overflow-x: scroll;
     transition: left 0.5s;
 
 }
+
+.songbutton img{
+    cursor: pointer ;
+
+
+}
+
+ .songinfo{
+    color: black;
+    background-color: white;
+    font-size: 10px;
+    width: 30%;
+    position: absolute;
+    left: 18px;
+    
+    bottom: 31px;
+    
+ }
+ .songtime{
+    color: black;
+    position: absolute;
+    right: 20px ;
+ }
+
+ .hamburger{
+    display: none;
+ }
+
+ .close{
+    display: none;
+ }
+ @media (max-width: 1470px) {
+    
+    .left{
+        position: absolute;
+        left: -120%;
+        transition: all ease-in-out 0.5s;
+        z-index: 1 ;
+        width: 370px;
+        background-color: black;
+    }
+
+    .right{
+        width: 100vw;
+    }
+
+    .playbar{
+        width: 90vw;
+    }
+
+    .hamburger{
+        display: block;
+        cursor: pointer;
+        transition: all ease-in-out 0.4s;
+        width: 40px;
+        
+    }
+
+    .hamburger:hover{
+        transform: scale(1.5);
+    }
+
+    .hamburgercontainer{
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .close{
+        display: block;
+        position: absolute;
+        right: 31px;
+        top: 25px;
+        width: 29px;
+
+        cursor: pointer;
+        transition: all ease-in-out 0.4s;
+    }
+
+    .close:hover{
+        transform: scale(1.4);
+    }
+
+    .cardcontainer{
+        width: 100vw;
+        margin:0px;
+    }
+
+    .songinfo{
+        height: 20px;
+        width: 30vw;
+        margin-bottom: 1rem;
+    }
+
+    .playbar{
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+
+
+
+ }
+
+
+ @media (max-width: 458px) {
+
+
+
+    .card{
+        width: 90vw;
+    }
+
+    .cardcontainer{
+        
+        margin:0px;
+    }
+
+    
+
+    .abovebar{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        
+    }
+ }

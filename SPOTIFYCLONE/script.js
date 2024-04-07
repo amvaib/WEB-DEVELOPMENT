@@ -1,4 +1,38 @@
 
+let currentSong = new Audio();
+
+const circle = document.querySelector(".circle");
+
+const songInfo = document.querySelector(".songinfo");
+
+let songTime = document.querySelector(".songtime");
+
+const seekbar = document.querySelector(".seekbar");
+
+const hamburger = document.querySelector(".hamburger");
+
+const left = document.querySelector(".left");
+
+const close = document.querySelector(".close");
+
+const next = document.querySelector("#next");
+const previous = document.querySelector("#previous");
+
+let songs;
+
+function secondsToMinutesSeconds(seconds) {
+    if (isNaN(seconds) || seconds < 0) {
+        return "00:00";
+    }
+
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+
+    const formattedMinutes = String(minutes).padStart(2, '0');
+    const formattedSeconds = String(remainingSeconds).padStart(2, '0');
+
+    return `${formattedMinutes}:${formattedSeconds}`;
+}
 
 async function getSongs(){
 
@@ -32,15 +66,27 @@ async function getSongs(){
 
 
 const playMusic = (track)=>{
-    let audio = new Audio("/SPOTIFYCLONE/songs/"+track)
-    audio.play();
+
+    currentSong.src = "/SPOTIFYCLONE/songs/" + track
+    
+    songInfo.innerHTML = `${track.replaceAll("%20", " ")}`
+
+    songTime.innerHTML = `00:00 / 00:00`;
+
+    currentSong.play();
+    play.src = "./img/pause.svg";
+
+
 }
 
 
 
 async function main(){
-    let currentSong;
-    let songs = await getSongs();
+
+
+
+    songs = await getSongs();
+    
     
     let songUL = document.querySelector(".songList ul")
 
@@ -71,6 +117,86 @@ async function main(){
         });
 
     }
+
+
+    //play pause buttons
+
+    play.addEventListener("click", ()=>{
+        if(currentSong.paused){
+            play.src = "./img/pause.svg"
+
+            currentSong.play();
+        } else{
+            currentSong.pause();
+            play.src = "./img/play.svg"
+        }
+    })
+
+    //Listen for timeupdate
+
+    currentSong.addEventListener("timeupdate", ()=>{
+
+
+        songTime.innerHTML = `${secondsToMinutesSeconds(currentSong.currentTime)} : ${secondsToMinutesSeconds(currentSong.duration)}`;
+
+        circle.style.left = (currentSong.currentTime/currentSong.duration)*100 + "%";
+    })
+
+
+    //seekbar
+
+    seekbar.addEventListener("click", (e)=>{
+        let percent = e.offsetX/e.target.getBoundingClientRect().width*100;
+        circle.style.left = percent+ "%";
+        currentSong.currentTime = ((currentSong.duration)*percent)/100;
+    })
+
+    //hamburger
+
+    hamburger.addEventListener("click", ()=>{
+        left.style.left = 0+"%";    
+    })
+
+
+    //close
+
+    close.addEventListener("click", ()=>{
+        left.style.left = -120 + "%";
+    })
+    
+
+    //next and previous
+
+    next.addEventListener("click", ()=>{
+        currentSong.pause();
+        play.src = "./img/play.svg"
+
+
+        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+
+        if((index+1)< songs.length -1){
+            playMusic(songs[index +1])
+        }
+
+        
+    })
+
+    previous.addEventListener("click", ()=>{
+        currentSong.pause();
+        play.src = "./img/play.svg"
+
+
+
+        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+
+        if((index-1)>= 0){
+            playMusic(songs[index -1])
+        } 
+        
+    })
+
+
+
 }
 
 main();

@@ -1,5 +1,6 @@
 
 let currentSong = new Audio();
+let currFolder;
 
 const circle = document.querySelector(".circle");
 
@@ -34,11 +35,11 @@ function secondsToMinutesSeconds(seconds) {
     return `${formattedMinutes}:${formattedSeconds}`;
 }
 
-async function getSongs(){
+async function getSongs(folder){
+    currFolder = folder;
 
-    let a = await fetch("http://127.0.0.1:5500/SPOTIFYCLONE/songs/");
+    let a = await fetch(`http://127.0.0.1:5500/SPOTIFYCLONE/songs/${currFolder}/`);
     let response = await a.text();
-    // console.log(response);
 
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -51,7 +52,7 @@ async function getSongs(){
     for(let i =0; i<as.length; i++){
         const element = as[i];
         if(element.href.endsWith(".mp3")){
-            songs.push(element.href.split("/songs/")[1])
+            songs.push(element.href.split(`/${folder}/`)[1])
         }
 
 
@@ -67,7 +68,7 @@ async function getSongs(){
 
 const playMusic = (track)=>{
 
-    currentSong.src = "/SPOTIFYCLONE/songs/" + track
+    currentSong.src = `songs/${currFolder}/` + track
     
     songInfo.innerHTML = `${track.replaceAll("%20", " ")}`
 
@@ -85,7 +86,7 @@ async function main(){
 
 
 
-    songs = await getSongs();
+    songs = await getSongs("gta");
     
     
     let songUL = document.querySelector(".songList ul")
@@ -194,6 +195,9 @@ async function main(){
         } 
         
     })
+
+
+
 
 
 

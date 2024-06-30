@@ -1,9 +1,10 @@
 const balance = new Number(100);
-// console.log(balance.toFixed(1));
+// console.log(balance.toFixed(5));
 
 const otherNumber = 123.545343;
 // console.log(otherNumber.toPrecision(3));
 
+console.log(balance.toString().length)
 const hundreds = 10000000;
 
 // console.log(hundreds.toLocaleString('en-IN'));
@@ -27,4 +28,4 @@ const hundreds = 10000000;
 const min  = 10;
 const max =40;
 
-console.log(Math.floor(Math.random()*(max-min+1)+min));
+// console.log(Math.floor(Math.random()*(max-min+1)+min));

@@ -21,6 +21,6 @@ const url = new String("https://vaibhav.com/vaibhav%20gautam");
 console.log(url.replace('%20','-'))
 
 
-console.log(url.includes('sundar'))
+console.log(url.includes('vaibhav'))
 
 console.log(gameName.split('-'));
